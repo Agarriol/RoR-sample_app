@@ -16,5 +16,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
     assert_select 'div.field_with_errors'
     assert_select  'form[action="/signup"]'
 
+    #follow_redirect!
+    #assert_template 'users/show'
+    #assert is_logged_in?
   end
 end
