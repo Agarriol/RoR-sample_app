@@ -8,5 +8,7 @@ class User < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false } #uniqueness true con case_sensitive false
 
+  #validates :password_confirmation, length: { minimum: 8 }
+
   has_secure_password #Para usarlo hace falta bcrypt. Comprueba hash contraseña con la de DB
 end
