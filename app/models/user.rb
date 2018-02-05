@@ -12,7 +12,7 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false } #uniqueness true con case_sensitive false
 
   has_secure_password #Para usarlo hace falta bcrypt. Comprueba hash contraseña con la de DB
-  validates :password, presence: true, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   # Returns the hash digest of the given string.
   #Sirve para hace run hash de las contraseñas y guardas este en db
